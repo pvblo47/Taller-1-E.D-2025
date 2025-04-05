@@ -1,0 +1,15 @@
+# ninja log v6
+14	546	7649798171203254	CMakeFiles/untitled.dir/Album.cpp.obj.ddi	d033fe35de9e2f75
+6	711	7649798171117835	CMakeFiles/untitled.dir/main.cpp.obj.ddi	fc003e4410c8a3c6
+711	876	7649798179742669	CMakeFiles/untitled.dir/CXX.dd	7b8da5926029e717
+711	876	7649798179742669	C:/Users/ulloc/Documents/Taller 1/cmake-build-debug/CMakeFiles/untitled.dir/CXXModules.json	7b8da5926029e717
+711	876	7649798179742669	CMakeFiles/untitled.dir/main.cpp.obj.modmap	7b8da5926029e717
+711	876	7649798179742669	CMakeFiles/untitled.dir/Album.cpp.obj.modmap	7b8da5926029e717
+10	2642	7649798198754803	CMakeFiles/untitled.dir/main.cpp.obj	12133aade1d62dc
+906	2219	7649798490661110	CMakeFiles/untitled.dir/Album.cpp.obj.ddi	d033fe35de9e2f75
+2219	2276	7649798503792800	CMakeFiles/untitled.dir/CXX.dd	7b8da5926029e717
+2219	2276	7649798503792800	C:/Users/ulloc/Documents/Taller 1/cmake-build-debug/CMakeFiles/untitled.dir/CXXModules.json	7b8da5926029e717
+2219	2276	7649798503792800	CMakeFiles/untitled.dir/main.cpp.obj.modmap	7b8da5926029e717
+2219	2276	7649798503792800	CMakeFiles/untitled.dir/Album.cpp.obj.modmap	7b8da5926029e717
+2278	3001	7649798504386776	CMakeFiles/untitled.dir/Album.cpp.obj	a9fd31316f2a350f
+3001	4830	7649798511610607	untitled.exe	c04b30bd747e0a09
