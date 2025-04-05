@@ -4,5 +4,8 @@ project(untitled)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(untitled main.cpp
-        cmake-build-debug/Album.cpp
-        cmake-build-debug/Album.h)
+        Album.cpp
+        Album.h
+        Cancion.cpp
+        Cancion.h
+)

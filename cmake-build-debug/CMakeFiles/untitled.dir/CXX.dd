@@ -3,3 +3,5 @@ build CMakeFiles/untitled.dir/main.cpp.obj: dyndep
 
 build CMakeFiles/untitled.dir/Album.cpp.obj: dyndep
 
+build CMakeFiles/untitled.dir/Cancion.cpp.obj: dyndep
+
