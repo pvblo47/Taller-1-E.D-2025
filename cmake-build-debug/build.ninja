@@ -94,7 +94,22 @@ build CMakeFiles/untitled.dir/Cancion.cpp.obj: CXX_COMPILER__untitled_scanned_De
   OBJECT_FILE_DIR = CMakeFiles\untitled.dir
   dyndep = CMakeFiles/untitled.dir/CXX.dd
 
-build CMakeFiles/untitled.dir/CXX.dd | C$:/Users/ulloc/Documents/Taller$ 1/cmake-build-debug/CMakeFiles/untitled.dir/CXXModules.json CMakeFiles/untitled.dir/main.cpp.obj.modmap CMakeFiles/untitled.dir/Album.cpp.obj.modmap CMakeFiles/untitled.dir/Cancion.cpp.obj.modmap: CXX_DYNDEP__untitled_Debug CMakeFiles/untitled.dir/main.cpp.obj.ddi CMakeFiles/untitled.dir/Album.cpp.obj.ddi CMakeFiles/untitled.dir/Cancion.cpp.obj.ddi | C$:/Users/ulloc/Documents/Taller$ 1/cmake-build-debug/CMakeFiles/untitled.dir/CXXDependInfo.json
+build CMakeFiles/untitled.dir/ListaAlbumes.cpp.obj.ddi: CXX_SCAN__untitled_Debug C$:/Users/ulloc/Documents/Taller$ 1/ListaAlbumes.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles\untitled.dir\ListaAlbumes.cpp.obj.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles\untitled.dir\ListaAlbumes.cpp.obj.ddi
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJ_FILE = CMakeFiles\untitled.dir\ListaAlbumes.cpp.obj
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles\untitled.dir\ListaAlbumes.cpp.obj.ddi.i
+
+build CMakeFiles/untitled.dir/ListaAlbumes.cpp.obj: CXX_COMPILER__untitled_scanned_Debug C$:/Users/ulloc/Documents/Taller$ 1/ListaAlbumes.cpp | CMakeFiles/untitled.dir/ListaAlbumes.cpp.obj.modmap || cmake_object_order_depends_target_untitled CMakeFiles/untitled.dir/CXX.dd
+  DEP_FILE = CMakeFiles\untitled.dir\ListaAlbumes.cpp.obj.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles\untitled.dir\ListaAlbumes.cpp.obj.modmap
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles\untitled.dir
+  dyndep = CMakeFiles/untitled.dir/CXX.dd
+
+build CMakeFiles/untitled.dir/CXX.dd | C$:/Users/ulloc/Documents/Taller$ 1/cmake-build-debug/CMakeFiles/untitled.dir/CXXModules.json CMakeFiles/untitled.dir/main.cpp.obj.modmap CMakeFiles/untitled.dir/Album.cpp.obj.modmap CMakeFiles/untitled.dir/Cancion.cpp.obj.modmap CMakeFiles/untitled.dir/ListaAlbumes.cpp.obj.modmap: CXX_DYNDEP__untitled_Debug CMakeFiles/untitled.dir/main.cpp.obj.ddi CMakeFiles/untitled.dir/Album.cpp.obj.ddi CMakeFiles/untitled.dir/Cancion.cpp.obj.ddi CMakeFiles/untitled.dir/ListaAlbumes.cpp.obj.ddi | C$:/Users/ulloc/Documents/Taller$ 1/cmake-build-debug/CMakeFiles/untitled.dir/CXXDependInfo.json
 
 
 # =============================================================================
@@ -104,7 +119,7 @@ build CMakeFiles/untitled.dir/CXX.dd | C$:/Users/ulloc/Documents/Taller$ 1/cmake
 #############################################
 # Link the executable untitled.exe
 
-build untitled.exe: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/main.cpp.obj CMakeFiles/untitled.dir/Album.cpp.obj CMakeFiles/untitled.dir/Cancion.cpp.obj
+build untitled.exe: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/main.cpp.obj CMakeFiles/untitled.dir/Album.cpp.obj CMakeFiles/untitled.dir/Cancion.cpp.obj CMakeFiles/untitled.dir/ListaAlbumes.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\untitled.dir

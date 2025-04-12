@@ -1,52 +1,44 @@
 #include "Album.h"
 #include <iostream>
-
 Album::Album() {
     id = 0;
     titulo = "";
     anio = 0;
-    esDeEstudio = false;
-    canciones = nullptr;  // No tiene canciones al principio
-    numCanciones = 0; // Va aumentando mientras se agregan en la lectura
-    capacidadCanciones = 0; // Va aumentando mientras se agregan en la lectura y mientras se va redimensionando
-}
-
-Album::Album(int id, const std::string& titulo, int anio, bool esDeEstudio) {
-    this->id = id;
-    this->titulo = titulo;
-    this->anio = anio;
-    this->esDeEstudio = esDeEstudio;
+    esDeEstudio = "No";
     canciones = nullptr;
     numCanciones = 0;
     capacidadCanciones = 0;
+    next = nullptr;
+}
+Album::Album(int id, const std::string& titulo, int anio, const std::string& esDeEstudio)
+    : id(id), titulo(titulo), anio(anio), esDeEstudio(esDeEstudio) {
+    canciones = nullptr;
+    numCanciones = 0;
+    capacidadCanciones = 0;
+    next = nullptr;
 }
 
 Album::~Album() {
-    delete[] this->canciones; // Se libera la memoria cuando el álbum ya no existe
+    delete[] canciones;
 }
 
+void Album::agregarCancion(int indiceCancion) {
+    if (numCanciones == capacidadCanciones) {
+        if (capacidadCanciones == 0) { 
+            capacidadCanciones = 4;
+        } else {
+            capacidadCanciones *= 2;
+        }
 
-int Album::getId() const {
-    return id;
+        int* nuevoArreglo = new int[capacidadCanciones];
+
+        for (int i = 0; i < numCanciones; ++i) {
+            nuevoArreglo[i] = canciones[i];
+        }
+
+        delete[] canciones;
+        canciones = nuevoArreglo;
+    }
+
+    canciones[numCanciones++] = indiceCancion;
 }
-
-std::string Album::getTitulo() const {
-    return titulo;
-}
-
-int Album::getAnio() const {
-    return anio;
-}
-
-bool Album::getEsDeEstudio() const {
-    return esDeEstudio;
-}
-
-int *Album::getCanciones() const {
-    return canciones;
-}
-
-int Album::getNumCanciones() const {
-    return numCanciones;
-}
-

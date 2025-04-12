@@ -31055,18 +31055,16 @@ private:
  int idCancion;
  int albumId;
  std::string titulo;
- long reproducciones;
- std::string duracion;
+ int reproducciones;
+ int duracion;
 
 public:
 
 
 
     Cancion();
-
- Cancion(const std::string &titulo, int reproducciones, const std::string &duracion);
 # 29 "C:/Users/ulloc/Documents/Taller 1/Cancion.h"
-    Cancion( int idCancion, int albumId, const std::string& titulo, int reproducciones, const std::string& duracion);
+    Cancion( int idCancion, int albumId, const std::string& titulo, int reproducciones, int duracion);
 
 
 
@@ -31095,7 +31093,7 @@ public:
 
 
 
-    std::string getDuracion() const;
+    int getDuracion() const;
 
 
 
@@ -31113,7 +31111,7 @@ public:
 
 
 
-    void setDuracion(const std::string& duracion);
+    void setDuracion(int duracion);
 };
 # 2 "C:/Users/ulloc/Documents/Taller 1/Cancion.cpp" 2
 
@@ -31123,11 +31121,11 @@ Cancion::Cancion() {
     albumId = 0;
     titulo = "";
     reproducciones = 0;
-    duracion = "0:00";
+    duracion = 0;
 }
 
 
-Cancion::Cancion(int idCancion, int albumId, const std::string& titulo, int reproducciones, const std::string& duracion) {
+Cancion::Cancion(int idCancion, int albumId, const std::string& titulo, int reproducciones, int duracion) {
     this->idCancion = idCancion;
     this->albumId = albumId;
     this->titulo = titulo;
@@ -31150,7 +31148,7 @@ int Cancion::getReproducciones() const {
     return reproducciones;
 }
 
-std::string Cancion::getDuracion() const {
+int Cancion::getDuracion() const {
     return duracion;
 }
 
@@ -31163,6 +31161,6 @@ void Cancion::setReproducciones(int reproducciones) {
     this->reproducciones = reproducciones;
 }
 
-void Cancion::setDuracion(const std::string& duracion) {
+void Cancion::setDuracion(int duracion) {
     this->duracion = duracion;
 }

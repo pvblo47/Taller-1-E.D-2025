@@ -1,30 +1,35 @@
 # ninja log v6
-906	2219	7649798490661110	CMakeFiles/untitled.dir/Album.cpp.obj.ddi	d033fe35de9e2f75
+310	3470	7661789965178171	CMakeFiles/untitled.dir/Album.cpp.obj.ddi	6a8049fd8d12b108
 6	711	7649798171117835	CMakeFiles/untitled.dir/main.cpp.obj.ddi	fc003e4410c8a3c6
-2219	2276	7649798503792800	CMakeFiles/untitled.dir/CXX.dd	7b8da5926029e717
+3470	3582	7661789996771065	CMakeFiles/untitled.dir/CXX.dd	e9743a2a64dcc98c
 10	2642	7649798198754803	CMakeFiles/untitled.dir/main.cpp.obj	12133aade1d62dc
-2278	3001	7649798504386776	CMakeFiles/untitled.dir/Album.cpp.obj	a9fd31316f2a350f
-2219	2276	7649798503792800	C:/Users/ulloc/Documents/Taller 1/cmake-build-debug/CMakeFiles/untitled.dir/CXXModules.json	7b8da5926029e717
-2219	2276	7649798503792800	CMakeFiles/untitled.dir/main.cpp.obj.modmap	7b8da5926029e717
-2219	2276	7649798503792800	CMakeFiles/untitled.dir/Album.cpp.obj.modmap	7b8da5926029e717
-3001	4830	7649798511610607	untitled.exe	c04b30bd747e0a09
-92	1405	7655964565330223	CMakeFiles/untitled.dir/Cancion.cpp.obj.ddi	ec2cc3bf2bf9957e
-83	1450	7655964565241727	CMakeFiles/untitled.dir/Album.cpp.obj.ddi	6a8049fd8d12b108
-1450	1571	7655964578911329	CMakeFiles/untitled.dir/CXX.dd	e9743a2a64dcc98c
-1450	1571	7655964578911329	C:/Users/ulloc/Documents/Taller 1/cmake-build-debug/CMakeFiles/untitled.dir/CXXModules.json	e9743a2a64dcc98c
-1450	1571	7655964578911329	CMakeFiles/untitled.dir/main.cpp.obj.modmap	e9743a2a64dcc98c
-1450	1571	7655964578911329	CMakeFiles/untitled.dir/Album.cpp.obj.modmap	e9743a2a64dcc98c
-1450	1571	7655964578911329	CMakeFiles/untitled.dir/Cancion.cpp.obj.modmap	e9743a2a64dcc98c
-1584	2916	7655964580257802	CMakeFiles/untitled.dir/Cancion.cpp.obj	8d7d76e6662ce8e7
-1580	2988	7655964580207759	CMakeFiles/untitled.dir/Album.cpp.obj	182ef88682b65120
-2989	4785	7655964594301675	untitled.exe	2bd01dd91e4aa73a
-24	180	7655966477029094	CMakeFiles/untitled.dir/Cancion.cpp.obj.ddi	ec2cc3bf2bf9957e
-18	219	7655966477029094	CMakeFiles/untitled.dir/Album.cpp.obj.ddi	6a8049fd8d12b108
-219	268	7655966479068185	CMakeFiles/untitled.dir/CXX.dd	e9743a2a64dcc98c
-219	268	7655966479068185	C:/Users/ulloc/Documents/Taller 1/cmake-build-debug/CMakeFiles/untitled.dir/CXXModules.json	e9743a2a64dcc98c
-219	268	7655966479068185	CMakeFiles/untitled.dir/main.cpp.obj.modmap	e9743a2a64dcc98c
-219	268	7655966479068185	CMakeFiles/untitled.dir/Album.cpp.obj.modmap	e9743a2a64dcc98c
-219	268	7655966479068185	CMakeFiles/untitled.dir/Cancion.cpp.obj.modmap	e9743a2a64dcc98c
-275	815	7655966479535777	CMakeFiles/untitled.dir/Cancion.cpp.obj	8d7d76e6662ce8e7
-270	927	7655966479535777	CMakeFiles/untitled.dir/Album.cpp.obj	182ef88682b65120
-927	1076	7655966486125618	untitled.exe	2bd01dd91e4aa73a
+3591	5307	7661789997977071	CMakeFiles/untitled.dir/Album.cpp.obj	182ef88682b65120
+3470	3582	7661789996771065	C:/Users/ulloc/Documents/Taller 1/cmake-build-debug/CMakeFiles/untitled.dir/CXXModules.json	e9743a2a64dcc98c
+3470	3582	7661789996771065	CMakeFiles/untitled.dir/main.cpp.obj.modmap	e9743a2a64dcc98c
+3470	3582	7661789996771065	CMakeFiles/untitled.dir/Album.cpp.obj.modmap	e9743a2a64dcc98c
+5308	7574	7661790015150227	untitled.exe	2bd01dd91e4aa73a
+25	205	7659572069271008	CMakeFiles/untitled.dir/Cancion.cpp.obj.ddi	ec2cc3bf2bf9957e
+3470	3582	7661789996771065	CMakeFiles/untitled.dir/Cancion.cpp.obj.modmap	e9743a2a64dcc98c
+332	1018	7659572072350468	CMakeFiles/untitled.dir/Cancion.cpp.obj	8d7d76e6662ce8e7
+18	244	7661808744070773	CMakeFiles/untitled.dir/Album.cpp.obj.ddi	6a8049fd8d12b108
+24	244	7661808744070773	CMakeFiles/untitled.dir/ListaAlbumes.cpp.obj.ddi	8972fb9628686e03
+245	320	7661808746319108	CMakeFiles/untitled.dir/CXX.dd	45da43cc6bf7dd2
+245	320	7661808746319108	C:/Users/ulloc/Documents/Taller 1/cmake-build-debug/CMakeFiles/untitled.dir/CXXModules.json	45da43cc6bf7dd2
+245	320	7661808746319108	CMakeFiles/untitled.dir/main.cpp.obj.modmap	45da43cc6bf7dd2
+245	320	7661808746319108	CMakeFiles/untitled.dir/Album.cpp.obj.modmap	45da43cc6bf7dd2
+245	320	7661808746319108	CMakeFiles/untitled.dir/Cancion.cpp.obj.modmap	45da43cc6bf7dd2
+245	320	7661808746319108	CMakeFiles/untitled.dir/ListaAlbumes.cpp.obj.modmap	45da43cc6bf7dd2
+333	984	7661808747230427	CMakeFiles/untitled.dir/ListaAlbumes.cpp.obj	2bd1d39d2ebed21e
+328	1004	7661808747170438	CMakeFiles/untitled.dir/Album.cpp.obj	182ef88682b65120
+1005	1205	7661808753883006	untitled.exe	46719acf53ab5dd2
+19	365	7661819275942091	CMakeFiles/untitled.dir/Album.cpp.obj.ddi	6a8049fd8d12b108
+27	367	7661819276027961	CMakeFiles/untitled.dir/ListaAlbumes.cpp.obj.ddi	8972fb9628686e03
+367	468	7661819279421297	CMakeFiles/untitled.dir/CXX.dd	45da43cc6bf7dd2
+367	468	7661819279421297	C:/Users/ulloc/Documents/Taller 1/cmake-build-debug/CMakeFiles/untitled.dir/CXXModules.json	45da43cc6bf7dd2
+367	468	7661819279421297	CMakeFiles/untitled.dir/main.cpp.obj.modmap	45da43cc6bf7dd2
+367	468	7661819279421297	CMakeFiles/untitled.dir/Album.cpp.obj.modmap	45da43cc6bf7dd2
+367	468	7661819279421297	CMakeFiles/untitled.dir/Cancion.cpp.obj.modmap	45da43cc6bf7dd2
+367	468	7661819279421297	CMakeFiles/untitled.dir/ListaAlbumes.cpp.obj.modmap	45da43cc6bf7dd2
+470	1305	7661819280445224	CMakeFiles/untitled.dir/Album.cpp.obj	182ef88682b65120
+475	1410	7661819280498197	CMakeFiles/untitled.dir/ListaAlbumes.cpp.obj	2bd1d39d2ebed21e
+1410	1697	7661819289852854	untitled.exe	46719acf53ab5dd2

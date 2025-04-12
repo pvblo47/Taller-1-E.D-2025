@@ -31060,18 +31060,16 @@ private:
  int idCancion;
  int albumId;
  std::string titulo;
- long reproducciones;
- std::string duracion;
+ int reproducciones;
+ int duracion;
 
 public:
 
 
 
     Cancion();
-
- Cancion(const std::string &titulo, int reproducciones, const std::string &duracion);
 # 29 "C:/Users/ulloc/Documents/Taller 1/Cancion.h"
-    Cancion( int idCancion, int albumId, const std::string& titulo, int reproducciones, const std::string& duracion);
+    Cancion( int idCancion, int albumId, const std::string& titulo, int reproducciones, int duracion);
 
 
 
@@ -31100,7 +31098,7 @@ public:
 
 
 
-    std::string getDuracion() const;
+    int getDuracion() const;
 
 
 
@@ -31118,19 +31116,14 @@ public:
 
 
 
-    void setDuracion(const std::string& duracion);
+    void setDuracion(int duracion);
 };
 # 6 "C:/Users/ulloc/Documents/Taller 1/Album.h" 2
 
 class Album {
 private:
-    int id;
-    std::string titulo;
-    int anio;
-    bool esDeEstudio;
-    Cancion* canciones;
-    int numCanciones;
-    int capacidadCanciones;
+
+
 
 public:
 
@@ -31144,12 +31137,14 @@ public:
 
 
 
-    Album(int id, const std::string& titulo, int anio, bool esDeEstudio);
+    Album(int id, const std::string& titulo, int anio, const std::string& esDeEstudio);
 
 
 
 
     ~Album();
+
+ void agregarCancion(int indiceCancion);
 
 
 
@@ -31173,13 +31168,13 @@ public:
 
 
 
-    bool getEsDeEstudio() const;
+     std::string getEsDeEstudio() const;
 
 
 
 
 
-    Cancion* getCanciones() const;
+    int *getCanciones() const;
 
 
 
@@ -31192,6 +31187,16 @@ public:
 
 
     int getCapacidadCanciones() const;
+
+    Album* next;
+    int id;
+    std::string titulo;
+    int anio;
+    std::string esDeEstudio;
+
+    int* canciones;
+    int numCanciones;
+    int capacidadCanciones;
 };
 # 2 "C:/Users/ulloc/Documents/Taller 1/Album.cpp" 2
 # 1 "C:/msys64/mingw64/include/c++/14.1.0/iostream" 1 3
@@ -41736,53 +41741,46 @@ namespace std
 }
 # 3 "C:/Users/ulloc/Documents/Taller 1/Album.cpp" 2
 
-
-# 4 "C:/Users/ulloc/Documents/Taller 1/Album.cpp"
+# 3 "C:/Users/ulloc/Documents/Taller 1/Album.cpp"
 Album::Album() {
     id = 0;
     titulo = "";
     anio = 0;
-    esDeEstudio = false;
+    esDeEstudio = "No";
     canciones = nullptr;
     numCanciones = 0;
     capacidadCanciones = 0;
+    next = nullptr;
 }
-
-Album::Album(int id, const std::string& titulo, int anio, bool esDeEstudio) {
-    this->id = id;
-    this->titulo = titulo;
-    this->anio = anio;
-    this->esDeEstudio = esDeEstudio;
+Album::Album(int id, const std::string& titulo, int anio, const std::string& esDeEstudio)
+    : id(id), titulo(titulo), anio(anio), esDeEstudio(esDeEstudio) {
     canciones = nullptr;
     numCanciones = 0;
     capacidadCanciones = 0;
+    next = nullptr;
 }
 
 Album::~Album() {
-    delete[] this->canciones;
+    delete[] canciones;
 }
 
+void Album::agregarCancion(int indiceCancion) {
+    if (numCanciones == capacidadCanciones) {
+        if (capacidadCanciones == 0) {
+            capacidadCanciones = 4;
+        } else {
+            capacidadCanciones *= 2;
+        }
 
-int Album::getId() const {
-    return id;
-}
+        int* nuevoArreglo = new int[capacidadCanciones];
 
-std::string Album::getTitulo() const {
-    return titulo;
-}
+        for (int i = 0; i < numCanciones; ++i) {
+            nuevoArreglo[i] = canciones[i];
+        }
 
-int Album::getAnio() const {
-    return anio;
-}
+        delete[] canciones;
+        canciones = nuevoArreglo;
+    }
 
-bool Album::getEsDeEstudio() const {
-    return esDeEstudio;
-}
-
-Cancion* Album::getCanciones() const {
-    return canciones;
-}
-
-int Album::getNumCanciones() const {
-    return numCanciones;
+    canciones[numCanciones++] = indiceCancion;
 }

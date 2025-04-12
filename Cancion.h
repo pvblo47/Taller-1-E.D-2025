@@ -8,8 +8,8 @@ private:
  int idCancion;
  int albumId;
  std::string titulo;
- long reproducciones;
- std::string duracion; //formato "Min:Seg"
+ int reproducciones;
+ int duracion; //formato "segundos"
 
 public:
     /**
@@ -17,16 +17,16 @@ public:
      */
     Cancion();
 
- Cancion(const std::string &titulo, int reproducciones, const std::string &duracion);
+
 
  /**
      *@param idCancion id de la cancion
      * @param albumId Id del album
      * @param titulo //de la canción
      * @param reproducciones //de la canción
-     * @param duracion // formato "Min:Seg"
+     * @param duracion // duracion en segundos
      */
-    Cancion( int idCancion, int albumId, const std::string& titulo, int reproducciones, const std::string& duracion);
+    Cancion( int idCancion, int albumId, const std::string& titulo, int reproducciones, int duracion);
 
  /**
   *
@@ -55,7 +55,7 @@ public:
      * 
      * @return Obtiene la duración de la canción
      */
-    std::string getDuracion() const;
+    int getDuracion() const;
 
     /**
      * 
@@ -73,7 +73,7 @@ public:
      * 
      * @param duracion Cambia la duracion
      */
-    void setDuracion(const std::string& duracion);
+    void setDuracion(int duracion);
 };
 
 #endif

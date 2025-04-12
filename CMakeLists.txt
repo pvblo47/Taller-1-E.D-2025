@@ -8,4 +8,6 @@ add_executable(untitled main.cpp
         Album.h
         Cancion.cpp
         Cancion.h
+        ListaAlbumes.cpp
+        ListaAlbumes.h
 )
