@@ -10,4 +10,8 @@ add_executable(untitled main.cpp
         Cancion.h
         ListaAlbumes.cpp
         ListaAlbumes.h
+        ArregloCanciones.cpp
+        ArregloCanciones.h
+        Sistema.cpp
+        Sistema.h
 )

@@ -8,6 +8,8 @@
 #include "Album.h"
 #include "ListaAlbumes.h"
 
+#include <vector>
+
 ListaAlbumes::ListaAlbumes() {
     head = nullptr;
 }
@@ -23,18 +25,33 @@ ListaAlbumes::~ListaAlbumes() {
 }
 
 void ListaAlbumes::insertarOrdenandoId(Album* nuevoAlbum) {
-    if (!head || nuevoAlbum->id < head->id) {
-        nuevoAlbum->next = head;
-        head = nuevoAlbum;
+    if (nuevoAlbum == nullptr) {
+        std::cerr << "Error: El puntero al álbum es nulo." << std::endl;
+        return;
+    }
+
+    // Depuración para ver el ID del álbum que se va a insertar
+    std::cout << "Insertando álbum con ID: " << nuevoAlbum->getId() << std::endl;
+
+    // Si la lista está vacía o el nuevo álbum debe ir antes que el primero
+    if (!head || nuevoAlbum->getId() < head->getId()) {
+        nuevoAlbum->next = head; // Apunta el "next" del nuevo álbum al primero
+        head = nuevoAlbum; // Actualiza head para que apunte al nuevo álbum
+        std::cout << "El álbum con ID " << nuevoAlbum->getId() << " se insertó al principio." << std::endl;
     } else {
+        // Si no es el primer álbum, recorreremos la lista
         Album* aux = head;
-        while (aux->next && aux->next->id < nuevoAlbum->id) { // Mientras exista el siguiente y el id del siguiente sea menor al id del album que se esta insertando
-            aux = aux->next; // el auxiliar recorre una posición
+        while (aux->next && aux->next->getId() < nuevoAlbum->getId()) {
+            aux = aux->next; // Avanza hasta el punto donde el nuevo álbum debe ir
         }
+
+        // Inserta el álbum en la posición correcta
         nuevoAlbum->next = aux->next;
         aux->next = nuevoAlbum;
+        std::cout << "Álbum con ID " << nuevoAlbum->getId() << " insertado correctamente." << std::endl;
     }
 }
+
 
 void ListaAlbumes::mostrarAlbumes() {
     Album* aux = head;
@@ -47,10 +64,10 @@ void ListaAlbumes::mostrarAlbumes() {
 Album* ListaAlbumes::buscarAlbumPorId(int id) {
     Album* aux = head;
     while (aux) {
-        if (aux->id == id) {
+        if (aux->getId() == id) {
             return aux;
         }
-        aux = aux->next;
+        aux = aux->getNext();
     }
     return nullptr;
 }
@@ -61,33 +78,63 @@ void ListaAlbumes::leerArchivoAlbumes(const std::string& nombreArchivo) {
     std::string linea;
 
     if (!archivo.is_open()) {
-        std::cerr << "Error al abrir el archivo" << std::endl;
+        std::cerr << "Error al abrir el archivo " << nombreArchivo << std::endl;
         return;
     }
 
+    std::cout << "Archivo de álbumes abierto correctamente." << std::endl;
+
     while (getline(archivo, linea)) {
+        std::cout << "Leyendo línea: " << linea << std::endl;
+
         std::stringstream ss(linea);
         std::string campo;
+        std::vector<std::string> campos;
 
+        // Leemos todos los campos separados por ';'
+        while (getline(ss, campo, ';')) {
+            campos.push_back(campo);
+        }
+
+        // Validamos que tenga al menos 5 campos (ID, título, año, estudio, canciones)
+        if (campos.size() < 5) {
+            std::cerr << "Línea ignorada por tener menos de 5 campos: " << linea << std::endl;
+            continue;
+        }
+
+        // Asignamos cada campo a su variable
         int idAlbum;
-        getline(ss, campo, ';');
-        idAlbum = std::stoi(campo);
+        try {
+            idAlbum = std::stoi(campos[0]);
+        } catch (const std::invalid_argument&) {
+            std::cerr << "ID inválido en línea: " << linea << std::endl;
+            continue;
+        }
 
-        std::string titulo;
-        getline(ss, titulo, ';');
+        std::string titulo = campos[1];
+        std::cout << "Título extraído: " << titulo << std::endl;  // Verificación del título
 
         int anio;
-        getline(ss, campo, ';');
-        anio = std::stoi(campo);
+        try {
+            anio = std::stoi(campos[2]);
+        } catch (const std::invalid_argument&) {
+            std::cerr << "Año inválido en línea: " << linea << std::endl;
+            continue;
+        }
 
-        std::string esDeEstudio;
-        getline(ss, esDeEstudio, ';');
+        std::string esDeEstudio = campos[3];
+        for (auto& c : esDeEstudio) c = std::tolower(c);
+        if (esDeEstudio == "sí" || esDeEstudio == "si") esDeEstudio = "Si";
+        else if (esDeEstudio == "no") esDeEstudio = "No";
+        else {
+            std::cerr << "Campo 'esDeEstudio' inválido en línea: " << linea << std::endl;
+            continue;
+        }
 
-        // (sin remover las llaves)
-        std::string canciones;
-        getline(ss, canciones, '\n');
+        std::string canciones = campos[4];
+        std::cout << "Canciones extraídas: " << canciones << std::endl;
 
-        // Se Quitan las llaves
+        // Limpiamos las llaves de la lista de canciones
         std::string cancionesSinLlaves = "";
         for (char c : canciones) {
             if (c != '{' && c != '}') {
@@ -95,18 +142,30 @@ void ListaAlbumes::leerArchivoAlbumes(const std::string& nombreArchivo) {
             }
         }
 
+        std::cout << "Canciones sin llaves: " << cancionesSinLlaves << std::endl;
+
+        // Creamos el álbum
         Album* nuevoAlbum = new Album(idAlbum, titulo, anio, esDeEstudio);
 
-        // (convertir a entero y agregarlas)
+        // Convertimos los índices de canciones a enteros y agregamos al álbum
         std::stringstream cancionesStream(cancionesSinLlaves);
         while (getline(cancionesStream, campo, ',')) {
-            int indiceCancion = std::stoi(campo); // Convertir el índice a int
-            nuevoAlbum->agregarCancion(indiceCancion); // Agrega la canción al álbum
+            try {
+                int indiceCancion = std::stoi(campo);
+                nuevoAlbum->agregarCancion(indiceCancion);
+            } catch (const std::invalid_argument&) {
+                std::cerr << "Índice de canción inválido en línea: " << linea << std::endl;
+                continue;
+            }
         }
 
-        // Inserta el álbum ordenado en la lista
         insertarOrdenandoId(nuevoAlbum);
     }
 
     archivo.close();
+}
+
+
+Album* ListaAlbumes::getHead() const {
+    return head;
 }

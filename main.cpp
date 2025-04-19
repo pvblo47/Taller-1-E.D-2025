@@ -1,7 +1,7 @@
-#include <iostream>
+#include "Sistema.h"
 
-int main()
-{
-    std::cout << "Hello, World!" << std::endl;
+int main() {
+    Sistema sistema;
+    sistema.iniciar();
     return 0;
 }

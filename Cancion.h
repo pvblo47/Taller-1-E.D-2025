@@ -32,13 +32,13 @@ public:
   *
   * @return Obtiene el id de cancion
   */
- int getIdCancion();
+ int getIdCancion() const;
 
  /**
   *
   * @return Obtiene el id del album
   */
- int getAlbumId();
+ int getAlbumId() const;
     /**
      * 
      * @return/ Obtiene el título de la cancion
@@ -74,6 +74,8 @@ public:
      * @param duracion Cambia la duracion
      */
     void setDuracion(int duracion);
+
+
 };
 
 #endif

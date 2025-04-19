@@ -154,4 +154,9 @@ CMakeFiles\untitled.dir\ListaAlbumes.cpp.obj.ddi: \
  C:/msys64/mingw64/include/c++/14.1.0/iostream \
  C:/Users/ulloc/Documents/Taller\ 1/Album.h \
  C:/Users/ulloc/Documents/Taller\ 1/Cancion.h \
- C:/Users/ulloc/Documents/Taller\ 1/ListaAlbumes.h
+ C:/Users/ulloc/Documents/Taller\ 1/ListaAlbumes.h \
+ C:/msys64/mingw64/include/c++/14.1.0/vector \
+ C:/msys64/mingw64/include/c++/14.1.0/bits/stl_uninitialized.h \
+ C:/msys64/mingw64/include/c++/14.1.0/bits/stl_vector.h \
+ C:/msys64/mingw64/include/c++/14.1.0/bits/stl_bvector.h \
+ C:/msys64/mingw64/include/c++/14.1.0/bits/vector.tcc

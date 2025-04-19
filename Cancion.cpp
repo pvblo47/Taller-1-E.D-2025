@@ -1,5 +1,9 @@
 #include "Cancion.h"
 
+#include <fstream>
+#include <iostream>
+#include <sstream>
+
 
 Cancion::Cancion() {
     idCancion = 0;
@@ -10,18 +14,14 @@ Cancion::Cancion() {
 }
 
 
-Cancion::Cancion(int idCancion, int albumId, const std::string& titulo, int reproducciones, int duracion) {
-    this->idCancion = idCancion;
-    this->albumId = albumId;
-    this->titulo = titulo;
-    this->reproducciones = reproducciones;
-    this->duracion = duracion;
-}
+Cancion::Cancion(int id, int albumId, const std::string& titulo, int reproducciones, int duracion)
+    : idCancion(id), albumId(albumId), titulo(titulo), reproducciones(reproducciones), duracion(duracion) {}
 
-int Cancion::getIdCancion() {
+
+int Cancion::getIdCancion() const {
     return idCancion;
 }
-int Cancion::getAlbumId() {
+int Cancion::getAlbumId() const {
     return albumId;
 }
 
@@ -49,3 +49,4 @@ void Cancion::setReproducciones(int reproducciones) {
 void Cancion::setDuracion(int duracion) {
     this->duracion = duracion;
 }
+

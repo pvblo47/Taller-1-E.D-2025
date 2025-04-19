@@ -49,8 +49,7 @@ public:
     void leerArchivoAlbumes(const std::string& nombreArchivo);
 
 
-
-
+       Album* getHead() const;
 };
 
 

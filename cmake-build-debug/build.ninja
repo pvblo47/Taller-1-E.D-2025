@@ -109,7 +109,37 @@ build CMakeFiles/untitled.dir/ListaAlbumes.cpp.obj: CXX_COMPILER__untitled_scann
   OBJECT_FILE_DIR = CMakeFiles\untitled.dir
   dyndep = CMakeFiles/untitled.dir/CXX.dd
 
-build CMakeFiles/untitled.dir/CXX.dd | C$:/Users/ulloc/Documents/Taller$ 1/cmake-build-debug/CMakeFiles/untitled.dir/CXXModules.json CMakeFiles/untitled.dir/main.cpp.obj.modmap CMakeFiles/untitled.dir/Album.cpp.obj.modmap CMakeFiles/untitled.dir/Cancion.cpp.obj.modmap CMakeFiles/untitled.dir/ListaAlbumes.cpp.obj.modmap: CXX_DYNDEP__untitled_Debug CMakeFiles/untitled.dir/main.cpp.obj.ddi CMakeFiles/untitled.dir/Album.cpp.obj.ddi CMakeFiles/untitled.dir/Cancion.cpp.obj.ddi CMakeFiles/untitled.dir/ListaAlbumes.cpp.obj.ddi | C$:/Users/ulloc/Documents/Taller$ 1/cmake-build-debug/CMakeFiles/untitled.dir/CXXDependInfo.json
+build CMakeFiles/untitled.dir/ArregloCanciones.cpp.obj.ddi: CXX_SCAN__untitled_Debug C$:/Users/ulloc/Documents/Taller$ 1/ArregloCanciones.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles\untitled.dir\ArregloCanciones.cpp.obj.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles\untitled.dir\ArregloCanciones.cpp.obj.ddi
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJ_FILE = CMakeFiles\untitled.dir\ArregloCanciones.cpp.obj
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles\untitled.dir\ArregloCanciones.cpp.obj.ddi.i
+
+build CMakeFiles/untitled.dir/ArregloCanciones.cpp.obj: CXX_COMPILER__untitled_scanned_Debug C$:/Users/ulloc/Documents/Taller$ 1/ArregloCanciones.cpp | CMakeFiles/untitled.dir/ArregloCanciones.cpp.obj.modmap || cmake_object_order_depends_target_untitled CMakeFiles/untitled.dir/CXX.dd
+  DEP_FILE = CMakeFiles\untitled.dir\ArregloCanciones.cpp.obj.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles\untitled.dir\ArregloCanciones.cpp.obj.modmap
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles\untitled.dir
+  dyndep = CMakeFiles/untitled.dir/CXX.dd
+
+build CMakeFiles/untitled.dir/Sistema.cpp.obj.ddi: CXX_SCAN__untitled_Debug C$:/Users/ulloc/Documents/Taller$ 1/Sistema.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles\untitled.dir\Sistema.cpp.obj.ddi.d
+  DYNDEP_INTERMEDIATE_FILE = CMakeFiles\untitled.dir\Sistema.cpp.obj.ddi
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJ_FILE = CMakeFiles\untitled.dir\Sistema.cpp.obj
+  PREPROCESSED_OUTPUT_FILE = CMakeFiles\untitled.dir\Sistema.cpp.obj.ddi.i
+
+build CMakeFiles/untitled.dir/Sistema.cpp.obj: CXX_COMPILER__untitled_scanned_Debug C$:/Users/ulloc/Documents/Taller$ 1/Sistema.cpp | CMakeFiles/untitled.dir/Sistema.cpp.obj.modmap || cmake_object_order_depends_target_untitled CMakeFiles/untitled.dir/CXX.dd
+  DEP_FILE = CMakeFiles\untitled.dir\Sistema.cpp.obj.d
+  DYNDEP_MODULE_MAP_FILE = CMakeFiles\untitled.dir\Sistema.cpp.obj.modmap
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles\untitled.dir
+  dyndep = CMakeFiles/untitled.dir/CXX.dd
+
+build CMakeFiles/untitled.dir/CXX.dd | C$:/Users/ulloc/Documents/Taller$ 1/cmake-build-debug/CMakeFiles/untitled.dir/CXXModules.json CMakeFiles/untitled.dir/main.cpp.obj.modmap CMakeFiles/untitled.dir/Album.cpp.obj.modmap CMakeFiles/untitled.dir/Cancion.cpp.obj.modmap CMakeFiles/untitled.dir/ListaAlbumes.cpp.obj.modmap CMakeFiles/untitled.dir/ArregloCanciones.cpp.obj.modmap CMakeFiles/untitled.dir/Sistema.cpp.obj.modmap: CXX_DYNDEP__untitled_Debug CMakeFiles/untitled.dir/main.cpp.obj.ddi CMakeFiles/untitled.dir/Album.cpp.obj.ddi CMakeFiles/untitled.dir/Cancion.cpp.obj.ddi CMakeFiles/untitled.dir/ListaAlbumes.cpp.obj.ddi CMakeFiles/untitled.dir/ArregloCanciones.cpp.obj.ddi CMakeFiles/untitled.dir/Sistema.cpp.obj.ddi | C$:/Users/ulloc/Documents/Taller$ 1/cmake-build-debug/CMakeFiles/untitled.dir/CXXDependInfo.json
 
 
 # =============================================================================
@@ -119,7 +149,7 @@ build CMakeFiles/untitled.dir/CXX.dd | C$:/Users/ulloc/Documents/Taller$ 1/cmake
 #############################################
 # Link the executable untitled.exe
 
-build untitled.exe: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/main.cpp.obj CMakeFiles/untitled.dir/Album.cpp.obj CMakeFiles/untitled.dir/Cancion.cpp.obj CMakeFiles/untitled.dir/ListaAlbumes.cpp.obj
+build untitled.exe: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/main.cpp.obj CMakeFiles/untitled.dir/Album.cpp.obj CMakeFiles/untitled.dir/Cancion.cpp.obj CMakeFiles/untitled.dir/ListaAlbumes.cpp.obj CMakeFiles/untitled.dir/ArregloCanciones.cpp.obj CMakeFiles/untitled.dir/Sistema.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\untitled.dir
